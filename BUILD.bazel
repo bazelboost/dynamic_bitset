@@ -1,0 +1,16 @@
+load("@rules_cc//cc:defs.bzl", "cc_library")
+
+cc_library(
+    name = "dynamic_bitset",
+    visibility = ["//visibility:public"],
+    includes = ["include"],
+    hdrs = glob(["include/boost/**/*.hpp"]),
+    deps = [
+        "@boost//core",
+        "@boost//integer",
+        "@boost//move",
+        "@boost//throw_exception",
+        "@boost//functional",
+        "@boost//container_hash",
+    ],
+)

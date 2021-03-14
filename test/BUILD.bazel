@@ -1,0 +1,81 @@
+load("@rules_cc//cc:defs.bzl", "cc_test")
+
+# cc_library(
+#     name = "bitset_test_lib",
+#     hdrs = ["bitset_test.hpp"],
+#     deps = [
+#         "//:dynamic_bitset",
+#         "@boost//config",
+#         "@boost//filesystem",
+#         "@boost//core",
+#     ],
+# )
+
+# cc_test(
+#     name = "dyn_bitset_unit_tests1",
+#     srcs = ["dyn_bitset_unit_tests1.cpp"],
+#     deps = [
+#         ":bitset_test_lib",
+#         "//:dynamic_bitset".
+#     ],
+# )
+
+# cc_test(
+#     name = "dyn_bitset_unit_tests2",
+#     srcs = ["dyn_bitset_unit_tests2.cpp"],
+#     deps = [
+#         ":bitset_test_lib",
+#         "//:dynamic_bitset".
+#     ],
+# )
+
+# cc_test(
+#     name = "dyn_bitset_unit_tests3",
+#     srcs = ["dyn_bitset_unit_tests3.cpp"],
+#     deps = [
+#         ":bitset_test_lib",
+#         "//:dynamic_bitset".
+#     ],
+# )
+
+# cc_test(
+#     name = "dyn_bitset_unit_tests4",
+#     srcs = ["dyn_bitset_unit_tests4.cpp"],
+#     deps = [
+#         ":bitset_test_lib",
+#         "//:dynamic_bitset".
+#     ],
+# )
+
+# cc_test(
+#     name = "dyn_bitset_unit_tests5",
+#     srcs = ["dyn_bitset_unit_tests5.cpp"],
+#     deps = [
+#         ":bitset_test_lib",
+#         "//:dynamic_bitset",
+#     ],
+# )
+
+cc_test(
+    name = "test_ambiguous_set",
+    srcs = ["test_ambiguous_set.cpp"],
+    deps = ["//:dynamic_bitset"],
+)
+
+cc_test(
+    name = "test_boost_hash",
+    srcs = ["test_boost_hash.cpp"],
+    deps = ["//:dynamic_bitset"],
+)
+
+cc_test(
+    name = "test_lowest_bit",
+    srcs = ["test_lowest_bit.cpp"],
+    deps = ["//:dynamic_bitset"],
+)
+
+cc_test(
+    name = "test_std_hash",
+    srcs = ["test_std_hash.cpp"],
+    deps = ["//:dynamic_bitset"],
+)
