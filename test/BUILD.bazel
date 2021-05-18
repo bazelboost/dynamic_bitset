@@ -5,9 +5,9 @@ load("@rules_cc//cc:defs.bzl", "cc_test")
 #     hdrs = ["bitset_test.hpp"],
 #     deps = [
 #         "//:dynamic_bitset",
-#         "@boost//config",
-#         "@boost//filesystem",
-#         "@boost//core",
+#         "@boost//libs/config",
+#         "@boost//libs/filesystem",
+#         "@boost//libs/core",
 #     ],
 # )
 
